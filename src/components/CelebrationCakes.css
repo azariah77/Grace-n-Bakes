@@ -1,0 +1,80 @@
+/* ===== Celebration Section ===== */
+.celeb-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.celeb-bg-accent {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--bg) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+.celeb-section > * { position: relative; z-index: 1; }
+
+.celeb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.4rem;
+}
+
+/* ===== Celeb Card ===== */
+.celeb-card {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.celeb-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(42,27,24,0.1);
+}
+
+/* Portrait 4:5 image */
+.celeb-img-wrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--cream);
+}
+.celeb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.celeb-card:hover .celeb-img { transform: scale(1.03); }
+
+.notice-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(42,27,24,0.88);
+  color: #fff;
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+}
+
+.celeb-info {
+  padding: 1.6rem 1.7rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .celeb-section { padding: 56px 1.2rem; }
+  .celeb-grid { grid-template-columns: 1fr; }
+}
