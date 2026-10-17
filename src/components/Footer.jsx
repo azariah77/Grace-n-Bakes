@@ -66,6 +66,17 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>© {year} Grace N Bakes. All rights reserved. Handcrafted with ♥ in Coimbatore.</p>
+        <div className="footer-developer-credit">
+          <span>Website designed &amp; developed by <strong>Rishaanth Labs</strong></span>
+          <span className="credit-sep">•</span>
+          <a href="https://rishaanthlabs.online" target="_blank" rel="noopener noreferrer" className="credit-link">
+            🌐 rishaanthlabs.online
+          </a>
+          <span className="credit-sep">•</span>
+          <a href="tel:+919443521545" className="credit-link">
+            📞 +91 94435 21545
+          </a>
+        </div>
       </div>
     </footer>
   );
